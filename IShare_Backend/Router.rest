@@ -1,0 +1,92 @@
+###
+POST http://localhost:3500/user
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "userName": "jane_12doe",
+  "email": "jane@example.com",
+  "phoneNumber": 1234567890,
+  "password": "securepassword"
+}
+
+
+###
+GET http://localhost:3500/user
+Content-Type: application/json
+
+###
+GET http://localhost:3500/user/66a4b4ea51a2c93dc6f76ced
+Content-Type: application/json
+
+###
+Post http://localhost:3500/user/login
+Content-Type: application/json
+
+{
+    "username":"jane_doe",
+    "password":"securepassword"
+}
+
+###
+PUT http://localhost:3500/user/66a49fd5d847611ec6b1efdd
+Content-Type: application/json
+
+{
+  "name": "sere",
+  "userName": "jane_doe_updated",
+  "email": "jane_updated@example.com",
+  "phoneNumber": 9876543210,
+  "password": "newpassword"
+}
+
+###
+DELETE http://localhost:3500/user/:id
+Content-Type: application/json
+
+###
+POST http://localhost:3500/user/66a4b4ea51a2c93dc6f76ce6/savedPosts
+Content-Type: application/json
+
+{
+  "postId": "66a4ecf287d88db932d164e1"
+}
+
+###Posts
+
+
+Post http://localhost:3500/post
+Content-Type: application/json
+
+{
+  "author": "66a4a5cfa8795fff7778fb06",  
+  "category": "Technology",
+  "description": "Understanding REST APIs",
+  "content": "This post explains the basics of REST APIs."
+}
+
+###
+GET http://localhost:3500/post
+Content-Type: application/json
+
+###
+GET http://localhost:3500/post/66a4ecf287d88db932d164e1
+Content-Type: application/json
+
+###
+PUT http://localhost:3500/post/66a4a19f37fc14ee64f2a7ed
+Content-Type: application/json
+
+{
+  "category": "Tech",
+  "description": "Updated description",
+  "content": "Updated content"
+}
+
+###
+DELETE http://localhost:3500/post/:id
+Content-Type: application/json
+
+###
+GET http://localhost:3500/posts/filter?category=Food
+Content-Type: application/json
